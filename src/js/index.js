@@ -2127,7 +2127,7 @@ export function setPlayerName(name, id) {
   GBselected.player_name = name;
 }
 
-function fCleardForGVG() {
+export function fCleardForGVG() {
   cityinvested.innerHTML = ``;
   output.innerHTML = ``;
   overview.innerHTML = ``;
@@ -2151,7 +2151,7 @@ function fCleardForGVG() {
   treasuryLog.innerHTML = "";
 }
 
-function clearVisitPlayer() {
+export function clearVisitPlayer() {
   cityinvested.innerHTML = ``;
   output.innerHTML = ``;
   overview.innerHTML = ``;
@@ -2171,7 +2171,7 @@ function clearVisitPlayer() {
   treasuryLog.innerHTML = "";
 }
 
-function clearExpedition() {
+export function clearExpedition() {
   cityinvested.innerHTML = ``;
   // output.innerHTML = ``;
   overview.innerHTML = ``;
@@ -2200,7 +2200,7 @@ function clearExpedition() {
   if (gvgAges) gvgAges.innerHTML = "";
 }
 
-function clearForBattleground() {
+export function clearForBattleground() {
   cityinvested.innerHTML = ``;
   // output.innerHTML = ``;
   overview.innerHTML = ``;
@@ -2229,7 +2229,7 @@ function clearForBattleground() {
   if (gvgAges) gvgAges.innerHTML = "";
 }
 
-function clearStartup() {
+export function clearStartup() {
   cityinvested.innerHTML = ``;
   output.innerHTML = ``;
   overview.innerHTML = ``;
@@ -2277,7 +2277,7 @@ function clearStartup() {
   rewardsOtherPlayer = [];
 }
 
-function clearCultural() {
+export function clearCultural() {
   cityinvested.innerHTML = ``;
   // output.innerHTML = ``;
   overview.innerHTML = ``;
