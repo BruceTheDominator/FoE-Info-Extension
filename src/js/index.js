@@ -2714,3 +2714,8 @@ function onRequested(status, details) {
 function onError(error) {
   console.log(`Error: ${error}`);
 }
+
+export function setUrl(value) {
+  url = value;
+}
+
