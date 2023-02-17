@@ -11,11 +11,8 @@
  * or else visit https://www.gnu.org/licenses/#AGPL
  * ________________________________________________________________
  */
-// import $ from "jquery";
-import { Tooltip, Popover } from "bootstrap";
-// import 'bootstrap';
+import { Popover } from "bootstrap";
 import icons from "bootstrap-icons/bootstrap-icons.svg";
-// import crypto  from 'crypto';
 import {
   CityEntityDefs,
   donationDIV,

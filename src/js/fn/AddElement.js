@@ -26,7 +26,10 @@ function fCopyButton(id, colour, pos, collapse) {
   // return `<button type="button" class="badge rounded-pill bg-${colour} float-end ${pos}-button" id="${id}" style="display: ${
   //   collapse ? "none" : "block"
   // }"><span data-i18n="copy">Copy</span></button>`;
-  return `<svg class="bi ${pos}-icon float-end" id="${id}" style="display: ${collapse ? "none" : "block"} fill="currentColor" width="24" height="20"><use xlink:href="${icons}#clipboard"/></svg>`;
+  return `<span class="bi ${pos}-icon float-end material-symbols-outlined" id="${id}" style="display: ${collapse ? "none" : "block"}">
+content_copy
+</span>`;
+  // return `<svg class="bi ${pos}-icon float-end" id="${id}" style="display: ${collapse ? "none" : "block"}" width="24" height="20"><use xlink:href="<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/></svg>`;
 }
 
 function fPostButton(id, colour, pos, collapse) {

@@ -88,6 +88,12 @@ p,
   // fill: blue;
 }
 
+.material-symbols-outlined {
+
+}
+
+
+
 .favorite-btn {
   background: #3d1472;
   color: white;
@@ -191,13 +197,23 @@ hr {
 }
 
 .stats-copy-icon {
+  cursor: pointer;
   // margin-top: 0em;
-  margin-right: 2em;
+  margin-right: 1em;
   // margin-right: 3em;
-  padding: 0.25em;
+  // padding: 0.25em;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 250,
+  'GRAD' 0,
+  'opsz' 20
 }
 
 .right-icon {
+  cursor: pointer;
   // margin-top: 0em;
   margin-right: 2em;
   // margin-right: 3em;
@@ -205,10 +221,11 @@ hr {
 }
 
 .mid-icon {
+  cursor: pointer;
   // margin-top: 0em;
-  // margin-right: 2em;
+  margin-right: 0.2em;
   // margin-right: 3em;
-  padding: 0.25em;
+  // padding: 0.25em;
 }
 
 .right-button {
