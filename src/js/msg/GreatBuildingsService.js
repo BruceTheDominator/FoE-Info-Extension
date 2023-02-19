@@ -78,14 +78,17 @@ export function showGreatBuldingDonation() {
   var donorsHTML = "";
   overview.innerHTML = "";
   //greatbuilding.innerHTML = ``;
-  outputHTML = `<div class="alert alert-success alert-dismissible" role="alert">
-    <p id="donorTextLabel" data-bs-toggle="collapse" href="#donorcollapse">
-    <svg class="bi header-icon" id="donoricon" href="#donorcollapse" data-bs-toggle="collapse" fill="currentColor" width="12" height="16"><use xlink:href="${icons}#${
-    collapse.collapseGBDonors ? "plus" : "dash"
-  }-circle"/></svg>
-    <strong><span data-i18n="gb">GB</span> Donors:</strong></p>
-    <button type="button" class="badge rounded-pill bg-success float-end right-button" id="donorCopyID"><span data-i18n="copy">Copy</span></button>`;
-  outputHTML += element.close();
+  outputHTML = `<div class="alert alert-success alert-dismissible" role="alert">`;
+    outputHTML += element.close();
+    outputHTML += `<p><span id="donorTextLabel" data-bs-toggle="collapse" href="#donorcollapse">
+    <strong><span data-i18n="gb">GB</span> Donors:</strong></span>`;
+    outputHTML += element.icon("donoricon", "donorcollapse", collapse.collapseGBDonors);
+    outputHTML += element.copy(
+      "donorCopyID",
+      "success",
+      "right",
+      collapse.collapseGBDonors
+    ) + `</p>`;
   outputHTML += `<div id="donorcollapse" class="collapse ${
     collapse.collapseGBDonors ? "" : "show"
   }"><p id="donorText">`;
@@ -155,6 +158,9 @@ export function showGreatBuldingDonation() {
       document
         .getElementById("donorCopyID")
         .addEventListener("click", copy.DonorCopy);
+      document
+        .getElementById("donoricon")
+        .addEventListener("click", collapse.fCollapseGBDonors);
       document
         .getElementById("donorTextLabel")
         .addEventListener("click", collapse.fCollapseGBDonors);
@@ -569,9 +575,15 @@ export function getConstructionRanking(msg, data) {
   // donorHTML = donorContainer.textContent;
   overview.innerHTML = "";
   //greatbuilding.innerHTML = ``;
-  outputHTML = `<div class="alert alert-success alert-dismissible show" role="alert">`;
+  outputHTML = `<div class="alert alert-success alert-dismissible show" role="alert"><p>`;
+  outputHTML += element.icon("donoricon", "donorTextCollapse", collapse.collapseGBDonors);
   outputHTML += element.close();
-  outputHTML += `<button type="button" class="badge rounded-pill bg-success right-button" id="donorCopyID2"><span data-i18n="copy">Copy</span></button>`;
+  outputHTML += element.copy(
+    "donorCopyID2",
+    "success",
+    "right",
+    collapse.collapseGBDonors
+  );
 
   if (msg.responseData.length) {
     // var total = 0;
@@ -609,7 +621,7 @@ export function getConstructionRanking(msg, data) {
   }
 
   // else{
-  outputHTML += `<p id="donorTextLabel2" data-bs-toggle="collapse" href="#donorTextCollapse"><strong><span data-i18n="gb">GB</span> Donors:</strong></p>`;
+  outputHTML += `<span id="donorTextLabel2" data-bs-toggle="collapse" href="#donorTextCollapse"><strong><span data-i18n="gb">GB</span> Donors:</strong></span></p>`;
   outputHTML += `<div id="donorTextCollapse" class="collapse ${
     collapse.collapseGBDonors ? "" : "show"
   }">`;
@@ -625,6 +637,9 @@ export function getConstructionRanking(msg, data) {
     document
       .getElementById("donorCopyID2")
       .addEventListener("click", copy.DonorCopy2);
+    document
+      .getElementById("donoricon")
+      .addEventListener("click", collapse.fCollapseGBDonors);
     document
       .getElementById("donorTextLabel2")
       .addEventListener("click", collapse.fCollapseGBDonors);

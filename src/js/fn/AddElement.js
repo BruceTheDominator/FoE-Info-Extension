@@ -11,7 +11,7 @@ function fCollapseIcon(id, _href, key, collapse) {
 }
 
 function fAddCollapseIcon(id, _href, collapse) {
-  return `<svg class="bi header-icon" id="${id}" href="#${_href}" data-bs-toggle="collapse" fill="currentColor" width="12" height="16"><use xlink:href="${icons}#${
+  return `<svg class="bi header-icon float-start" id="${id}" href="#${_href}" data-bs-toggle="collapse" fill="currentColor" width="12" height="16"><use xlink:href="${icons}#${
     collapse ? "plus" : "dash"
   }-circle"/></svg>`;
 }
@@ -43,7 +43,7 @@ function fCloseButton() {
 }
 
 function fClearIcon(id, _href, collapse) {
-  return `<svg class="bi right-icon float-end" id="${id}" style="display: ${collapse ? "none" : "block"} href="#${_href}" fill="currentColor" width="16" height="20"><use xlink:href="${icons}#eraser-fill"/></svg>`;
+  return `<svg class="bi right-bootstrap-icon float-end" id="${id}" style="display: ${collapse ? "none" : "block"} href="#${_href}" fill="currentColor" width="16" height="20"><use xlink:href="${icons}#eraser-fill"/></svg>`;
 }
 
 export {
