@@ -26,6 +26,8 @@ export var toolOptions = {
   rewardSize: 200,
   buildingCostSize: 200,
   minSize: 50,
+  useCopyIcon: false,
+  useNewDonation: false
 };
 
 export function setToolOptions(value) {
@@ -119,3 +121,8 @@ export function setBuildingCostSize(height) {
     storage.set("toolOptions", toolOptions);
   }
 }
+
+export function setUseCopyIcon(enabled) {
+    toolOptions.useCopyIcon = enabled;
+    storage.set("toolOptions", toolOptions);
+  }
